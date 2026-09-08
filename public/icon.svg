@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="sheetGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with smooth rounded corners -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)"/>
+  
+  <!-- Paper / Sheet Shape -->
+  <g transform="translate(96, 76)">
+    <!-- Sheet background shadow -->
+    <rect x="0" y="0" width="320" height="360" rx="24" fill="black" opacity="0.2" transform="translate(0, 12)"/>
+    <!-- Sheet base -->
+    <rect x="0" y="0" width="320" height="360" rx="24" fill="url(#sheetGrad)"/>
+    
+    <!-- Table Header Row (Green Accent) -->
+    <rect x="24" y="32" width="272" height="44" rx="8" fill="#10b981"/>
+    
+    <!-- Table Rows -->
+    <rect x="24" y="92" width="272" height="32" rx="6" fill="#e2e8f0"/>
+    <rect x="24" y="136" width="272" height="32" rx="6" fill="#f8fafc"/>
+    <rect x="24" y="180" width="272" height="32" rx="6" fill="#e2e8f0"/>
+    <rect x="24" y="224" width="272" height="32" rx="6" fill="#f8fafc"/>
+    
+    <!-- Summary / Total Row (Emerald) -->
+    <rect x="24" y="272" width="272" height="40" rx="8" fill="#047857"/>
+    
+    <!-- Grid columns dividers representation -->
+    <rect x="110" y="32" width="4" height="236" fill="#ffffff" opacity="0.6"/>
+    <rect x="200" y="32" width="4" height="236" fill="#ffffff" opacity="0.6"/>
+  </g>
+  
+  <!-- Excel / Camera Floating Badge -->
+  <g transform="translate(290, 290)">
+    <circle cx="90" cy="90" r="82" fill="#022c22" stroke="#34d399" stroke-width="8"/>
+    <!-- Camera lens / Excel X symbol -->
+    <path d="M 65 60 L 115 120 M 115 60 L 65 120" stroke="#34d399" stroke-width="14" stroke-linecap="round"/>
+  </g>
+</svg>

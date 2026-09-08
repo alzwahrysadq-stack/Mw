@@ -1,0 +1,35 @@
+{
+  "appId": "com.sadeq.paper.to.excel",
+  "productName": "ورقة إلى إكسل ذكي",
+  "copyright": "حقوق التطوير محفوظة © صادق الظاهري 2026 - هاتف: 772092700",
+  "directories": {
+    "output": "dist-desktop",
+    "buildResources": "build"
+  },
+  "files": [
+    "dist/**/*",
+    "electron/**/*",
+    "package.json"
+  ],
+  "asar": true,
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ],
+    "artifactName": "Paper-to-Excel-AI-Setup-2026.${ext}"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "ورقة إلى إكسل ذكي"
+  }
+}
