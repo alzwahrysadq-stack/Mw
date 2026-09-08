@@ -1,4 +1,4 @@
-name: Build Android APK
+name: Build Web to APK
 
 on:
   push:
@@ -16,31 +16,17 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install Dependencies & Build Web
+      - name: Build Web App
         run: |
           npm install
-          npm run build || echo "No build script, proceeding"
+          npm run build || echo "Skipping build script"
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: Install Cordova for Android Packaging
+      - name: Create Archive of Web Files
         run: |
-          npm install -g cordova
-          cordova create myApp com.sadeq.excelapp ExcelApp
-          cd myApp
-          cordova platform add android
+          zip -r web-app.zip .
 
-      - name: Build Debug APK
-        run: |
-          cd myApp
-          cordova build android --debug
-
-      - name: Upload APK Artifact
+      - name: Upload Web Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: app-debug
-          path: myApp/platforms/android/app/build/outputs/apk/debug/app-debug.apk
+          name: web-files-package
+          path: web-app.zip
