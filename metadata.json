@@ -1,5 +1,5 @@
 {
-  "name": "Remix ورقة إلى إكسل ذكي | Paper to Excel AI",
+  "name": "ورقة إلى إكسل ذكي | Paper to Excel AI",
   "description": "تطبيق ذكي لتصوير أي ورقة أو مستند أو رفعه من الملفات وتحويله فوراً إلى ملف إكسل مطابق تماماً بالشكل والألوان والمحتوى.",
   "requestFramePermissions": [
     "camera"
